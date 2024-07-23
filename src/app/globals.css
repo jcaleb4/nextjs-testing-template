@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 155, 255, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  @apply bg-gray-800;
+  @apply text-gray-950;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .btn {
+    @apply px-2 text-center rounded-md text-sm h-8 hover:text-white hover:bg-[#56b1af] bg-[#7fdbda];
+  }
+
+  .btn.danger {
+    @apply bg-[#ff8c80] hover:bg-[#dc4e4e];
+  }
+  
+  .btn.warning {
+    @apply bg-[#f7ee72] hover:bg-[#d9c94c];
+  }
+}
